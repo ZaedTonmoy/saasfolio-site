@@ -392,10 +392,92 @@ p {
     display: none;
   }
 
+  /* Hide header CTA on mobile — mobile menu has its own */
+  .nav-actions .btn {
+    display: none;
+  }
+
   .nav-burger {
     display: flex;
   }
+
+  /* --- Mobile Menu Polish --- */
+  .mobile-menu a {
+    font-size: 1.1rem;
+    padding: 14px 0;
+  }
+
+  .mobile-menu .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
+
+  /* --- Hero Section Mobile --- */
+  .hero {
+    flex-direction: column;
+    min-height: auto;
+    padding: 120px 0 60px;
+  }
+
+  .hero-content {
+    padding: 0 20px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+  }
+
+  .hero .subtitle {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+
+  /* --- Dashboard Mockup Mobile --- */
+  .dashboard-mockup {
+    margin-top: 40px;
+  }
+
+  .dashboard-mockup-inner {
+    padding: 16px;
+    min-height: auto;
+  }
+
+  .mockup-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .mockup-stat-card {
+    padding: 12px;
+  }
+
+  .mockup-stat-label {
+    font-size: 0.6rem;
+  }
+
+  .mockup-stat-value {
+    font-size: 1.1rem;
+  }
+
+  .mockup-chart {
+    height: 120px;
+  }
 }
+
 
 /* --- Buttons --- */
 .btn {
