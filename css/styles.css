@@ -2800,13 +2800,6 @@ p {
   color: #fff;
 }
 
-.tab-panel {
-  display: none;
-}
-
-.tab-panel.active {
-  display: block;
-}
 
 /* Feature check alias */
 .feature-check {
