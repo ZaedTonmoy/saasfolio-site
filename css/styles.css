@@ -1915,6 +1915,15 @@ p {
   color: var(--text-tertiary);
 }
 
+.pricing-features li.feature-unavailable {
+  opacity: 0.45;
+}
+
+.pricing-features li.feature-unavailable .icon {
+  color: #ef4444;
+  font-size: 0.75rem;
+}
+
 .pricing-card .btn {
   width: 100%;
   justify-content: center;

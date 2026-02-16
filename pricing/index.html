@@ -92,70 +92,28 @@
     <!-- Pricing Grid Section -->
     <section class="section reveal">
         <div class="container">
-            <div class="pricing-grid">
+            <div class="pricing-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 900px; margin: 0 auto;">
                 <!-- Free Plan -->
                 <div class="pricing-card">
-                    <div class="pricing-tier">Free</div>
+                    <div class="pricing-tier">📦 Free</div>
                     <div class="pricing-price">
                         <span class="amount">$0</span>
-                        <span class="period">/month</span>
+                        <span class="period"> forever</span>
                     </div>
-                    <p class="pricing-desc">For getting started.</p>
+                    <p class="pricing-desc">Everything you need to get started tracking your software portfolio.</p>
 
                     <ul class="pricing-features">
                         <li>
                             <span class="icon">✓</span>
-                            Up to 10 tools
-                        </li>
-                        <li>
-                            <span class="icon">✓</span>
-                            Portfolio dashboard (basic)
-                        </li>
-                        <li>
-                            <span class="icon">✓</span>
-                            Per-tool ROI tracking
-                        </li>
-                        <li>
-                            <span class="icon">✓</span>
-                            Revenue logging (one-time)
+                            Up to 5 tools
                         </li>
                         <li>
                             <span class="icon">✓</span>
                             Basic analytics
                         </li>
-                    </ul>
-
-                    <a href="https://portal.saasfolio.app/signup" class="btn btn-secondary">Get Started Free</a>
-                </div>
-
-                <!-- Pro Plan (Featured) -->
-                <div class="pricing-card featured">
-                    <span class="pricing-badge">Most Popular</span>
-                    <div class="pricing-tier">Pro</div>
-                    <div class="pricing-price">
-                        <span class="amount">$19</span>
-                        <span class="period">/month</span>
-                    </div>
-                    <p style="font-size: 0.85rem; color: var(--text-tertiary); margin-bottom: 20px;">(or $190/year —
-                        save $38)</p>
-                    <p class="pricing-desc">For serious software investors.</p>
-
-                    <ul class="pricing-features">
                         <li>
                             <span class="icon">✓</span>
-                            Everything in Free, plus:
-                        </li>
-                        <li>
-                            <span class="icon">✓</span>
-                            Unlimited tools
-                        </li>
-                        <li>
-                            <span class="icon">✓</span>
-                            Recurring subscription tracking
-                        </li>
-                        <li>
-                            <span class="icon">✓</span>
-                            MRR calculation
+                            Dashboard
                         </li>
                         <li>
                             <span class="icon">✓</span>
@@ -163,7 +121,84 @@
                         </li>
                         <li>
                             <span class="icon">✓</span>
-                            Full analytics & forecasting
+                            Revenue tracking
+                        </li>
+                        <li>
+                            <span class="icon">✓</span>
+                            Portfolio page
+                        </li>
+                        <li>
+                            <span class="icon">✓</span>
+                            Export data
+                        </li>
+                        <li>
+                            <span class="icon">✓</span>
+                            Notification settings
+                        </li>
+                        <li class="feature-unavailable">
+                            <span class="icon">✗</span>
+                            Limited tool details
+                        </li>
+                        <li class="feature-unavailable">
+                            <span class="icon">✗</span>
+                            Revenue charts
+                        </li>
+                        <li class="feature-unavailable">
+                            <span class="icon">✗</span>
+                            Custom SMTP
+                        </li>
+                        <li class="feature-unavailable">
+                            <span class="icon">✗</span>
+                            Custom domain
+                        </li>
+                    </ul>
+
+                    <a href="https://portal.saasfolio.app/signup" class="btn btn-secondary">Get Started Free</a>
+                </div>
+
+                <!-- Premium Plan (Featured) -->
+                <div class="pricing-card featured">
+                    <span class="pricing-badge">👑 Best Value</span>
+                    <div class="pricing-tier">Premium</div>
+
+                    <!-- Pricing toggle -->
+                    <div class="pricing-toggle"
+                        style="display: flex; gap: 8px; justify-content: center; margin-bottom: 12px;">
+                        <button class="toggle-btn active" data-plan="yearly"
+                            style="padding: 6px 16px; border-radius: 20px; border: 1px solid rgba(139,92,246,0.3); background: rgba(139,92,246,0.15); color: #a78bfa; font-size: 0.85rem; cursor: pointer; transition: all 0.3s;">Yearly</button>
+                        <button class="toggle-btn" data-plan="lifetime"
+                            style="padding: 6px 16px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); background: transparent; color: var(--text-tertiary); font-size: 0.85rem; cursor: pointer; transition: all 0.3s;">Lifetime</button>
+                    </div>
+
+                    <div class="pricing-price" id="premiumPrice">
+                        <span class="amount" id="premiumAmount">$10</span>
+                        <span class="period" id="premiumPeriod"> /year</span>
+                    </div>
+                    <p id="premiumSubtext"
+                        style="font-size: 0.85rem; color: var(--text-tertiary); margin-bottom: 20px;">Less than $1/month
+                    </p>
+                    <p class="pricing-desc">Unlock the full power of SaaSfolio. Everything in Free, plus:</p>
+
+                    <ul class="pricing-features">
+                        <li>
+                            <span class="icon">✓</span>
+                            <strong>Unlimited</strong> tools
+                        </li>
+                        <li>
+                            <span class="icon">✓</span>
+                            Full tool details & financial breakdowns
+                        </li>
+                        <li>
+                            <span class="icon">✓</span>
+                            Advanced analytics
+                        </li>
+                        <li>
+                            <span class="icon">✓</span>
+                            Earning velocity & break-even projections
+                        </li>
+                        <li>
+                            <span class="icon">✓</span>
+                            Client dependency insights
                         </li>
                         <li>
                             <span class="icon">✓</span>
@@ -171,64 +206,23 @@
                         </li>
                         <li>
                             <span class="icon">✓</span>
-                            Tool comparison insights
+                            Export data
                         </li>
                         <li>
                             <span class="icon">✓</span>
-                            Monthly portfolio reports
+                            Custom SMTP — send from your domain
                         </li>
                         <li>
                             <span class="icon">✓</span>
-                            Revenue milestone alerts
+                            Custom domain with CNAME verification
+                        </li>
+                        <li>
+                            <span class="icon">✓</span>
+                            Dashboard, client management & more
                         </li>
                     </ul>
 
-                    <a href="https://portal.saasfolio.app/signup" class="btn btn-primary">Start Pro Free for 14 Days</a>
-                </div>
-
-                <!-- Agency Plan -->
-                <div class="pricing-card">
-                    <div class="pricing-tier">Agency</div>
-                    <div class="pricing-price">
-                        <span class="amount">$49</span>
-                        <span class="period">/month</span>
-                    </div>
-                    <p style="font-size: 0.85rem; color: var(--text-tertiary); margin-bottom: 20px;">(or $490/year —
-                        save $98)</p>
-                    <p class="pricing-desc">For agencies and power users.</p>
-
-                    <ul class="pricing-features">
-                        <li>
-                            <span class="icon">✓</span>
-                            Everything in Pro, plus:
-                        </li>
-                        <li>
-                            <span class="icon">✓</span>
-                            Custom domain support
-                        </li>
-                        <li>
-                            <span class="icon">✓</span>
-                            Custom SMTP/email
-                        </li>
-                        <li>
-                            <span class="icon">✓</span>
-                            Priority support
-                        </li>
-                        <li>
-                            <span class="icon">✓</span>
-                            Advanced client reporting
-                        </li>
-                        <li>
-                            <span class="icon">✓</span>
-                            Team access (up to 5)
-                        </li>
-                        <li>
-                            <span class="icon">✓</span>
-                            API access (coming soon)
-                        </li>
-                    </ul>
-
-                    <a href="https://portal.saasfolio.app/signup" class="btn btn-secondary">Start Agency Free for 14 Days</a>
+                    <a href="https://portal.saasfolio.app/signup" class="btn btn-primary">Upgrade to Premium</a>
                 </div>
             </div>
         </div>
@@ -245,98 +239,82 @@
                         <tr>
                             <th>Feature</th>
                             <th>Free</th>
-                            <th>Pro</th>
-                            <th>Agency</th>
+                            <th>👑 Premium</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Tools tracked</td>
-                            <td>10</td>
-                            <td>Unlimited</td>
-                            <td>Unlimited</td>
+                            <td>Tools</td>
+                            <td>Up to 5</td>
+                            <td><strong>Unlimited</strong></td>
                         </tr>
                         <tr>
-                            <td>Portfolio dashboard</td>
-                            <td>Basic</td>
-                            <td>Full</td>
-                            <td>Full</td>
-                        </tr>
-                        <tr>
-                            <td>Per-tool ROI</td>
-                            <td>✓</td>
-                            <td>✓</td>
-                            <td>✓</td>
-                        </tr>
-                        <tr>
-                            <td>Revenue logging</td>
-                            <td>One-time</td>
-                            <td>All types</td>
-                            <td>All types</td>
-                        </tr>
-                        <tr>
-                            <td>MRR calculation</td>
-                            <td>—</td>
-                            <td>✓</td>
-                            <td>✓</td>
-                        </tr>
-                        <tr>
-                            <td>Client management</td>
-                            <td>—</td>
-                            <td>✓</td>
-                            <td>✓</td>
+                            <td>Tool details</td>
+                            <td>Limited</td>
+                            <td>Full access</td>
                         </tr>
                         <tr>
                             <td>Analytics</td>
                             <td>Basic</td>
-                            <td>Full</td>
-                            <td>Full</td>
+                            <td>Advanced</td>
                         </tr>
                         <tr>
                             <td>Revenue charts</td>
                             <td>—</td>
                             <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Earning velocity</td>
+                            <td>—</td>
                             <td>✓</td>
                         </tr>
                         <tr>
-                            <td>Tool comparison</td>
+                            <td>Break-even projections</td>
                             <td>—</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Client dependency insights</td>
+                            <td>—</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Export data</td>
                             <td>✓</td>
                             <td>✓</td>
                         </tr>
                         <tr>
-                            <td>Monthly reports</td>
-                            <td>—</td>
+                            <td>Dashboard</td>
                             <td>✓</td>
                             <td>✓</td>
                         </tr>
                         <tr>
-                            <td>Milestone alerts</td>
-                            <td>—</td>
+                            <td>Client management</td>
                             <td>✓</td>
                             <td>✓</td>
                         </tr>
                         <tr>
-                            <td>Custom domain</td>
-                            <td>—</td>
-                            <td>—</td>
+                            <td>Revenue tracking</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Portfolio page</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Notification settings</td>
+                            <td>✓</td>
                             <td>✓</td>
                         </tr>
                         <tr>
                             <td>Custom SMTP</td>
                             <td>—</td>
-                            <td>—</td>
                             <td>✓</td>
                         </tr>
                         <tr>
-                            <td>Team access</td>
-                            <td>—</td>
-                            <td>—</td>
-                            <td>Up to 5</td>
-                        </tr>
-                        <tr>
-                            <td>Priority support</td>
-                            <td>—</td>
+                            <td>Custom domain</td>
                             <td>—</td>
                             <td>✓</td>
                         </tr>
@@ -354,42 +332,41 @@
             <div class="faq-list">
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>What happens when I hit 10 tools on Free?</span>
+                        <span>What happens when I hit 5 tools on Free?</span>
                         <span class="faq-arrow">▾</span>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            You'll be prompted to upgrade to Pro or Agency. Your data is safe — upgrading simply unlocks
-                            the ability to add more tools and access the premium features. You can always stay on Free
-                            with your 10 tracked tools if you choose.
+                            You'll be prompted to upgrade to Premium. Your data is safe — upgrading simply unlocks
+                            unlimited tools and all premium features. You can always stay on Free
+                            with your 5 tracked tools if you choose.
                         </div>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>Can I switch plans anytime?</span>
+                        <span>What's the difference between Yearly and Lifetime?</span>
                         <span class="faq-arrow">▾</span>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            Yes. You can upgrade or downgrade your plan at any time. If you downgrade, you'll have
-                            access to your current plan's features immediately. If you're on a paid plan and downgrade
-                            to Free, we'll credit any unused subscription time to your account for future upgrades.
+                            Both give you the exact same Premium features. Yearly is $10/year (less than $1/month) and
+                            renews annually. Lifetime is a one-time $20 payment — pay once, use forever. If you plan
+                            to use SaaSfolio for more than 2 years, Lifetime is the better deal.
                         </div>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>Is there a free trial for Pro and Agency?</span>
+                        <span>Can I switch from Yearly to Lifetime?</span>
                         <span class="faq-arrow">▾</span>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            Yes. Both Pro and Agency plans come with a 14-day free trial. No credit card required to
-                            start. After 14 days, your plan will be paused if you don't add payment information. If you
-                            add a payment method during your trial, billing will begin on day 15.
+                            Yes! You can switch to the Lifetime plan at any time. Your existing subscription will be
+                            cancelled and you'll be charged $20 one-time for permanent access.
                         </div>
                     </div>
                 </div>
@@ -401,10 +378,9 @@
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            We offer a 30-day money-back guarantee on annual plans. If you're not satisfied with
-                            SaaSfolio, contact our support team within 30 days of your purchase and we'll issue a full
-                            refund. Monthly subscriptions can be cancelled anytime with no refund, but you won't be
-                            charged for the following month.
+                            We offer a 30-day money-back guarantee on both Yearly and Lifetime plans. If you're not
+                            satisfied with SaaSfolio, contact our support team within 30 days of your purchase and we'll
+                            issue a full refund.
                         </div>
                     </div>
                 </div>
@@ -416,10 +392,9 @@
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            We're committed to keeping SaaSfolio affordable. If we adjust pricing in the future, we'll
-                            give all existing customers at least 60 days' notice. Any price increases won't apply to
-                            current subscribers — you'll keep your current rate as long as you maintain your
-                            subscription.
+                            We're committed to keeping SaaSfolio affordable. If we adjust pricing in the future,
+                            Lifetime users keep their access forever at no extra cost. Yearly subscribers will keep
+                            their current rate as long as they maintain their subscription.
                         </div>
                     </div>
                 </div>
@@ -431,7 +406,7 @@
     <section class="cta-section reveal">
         <div class="container text-center">
             <h2>Your software investments are worth tracking.</h2>
-            <p class="subtitle center">Start free today and upgrade as you grow.</p>
+            <p class="subtitle center">Start free. Upgrade to Premium for less than $1/month.</p>
             <a href="https://portal.saasfolio.app/signup" class="btn btn-primary btn-lg">Get Started Free →</a>
         </div>
     </section>
@@ -504,6 +479,37 @@
                 // Toggle current item
                 if (!isOpen) {
                     item.classList.add('open');
+                }
+            });
+        });
+
+        // Pricing toggle (Yearly / Lifetime)
+        document.querySelectorAll('.toggle-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.toggle-btn').forEach(b => {
+                    b.style.border = '1px solid rgba(255,255,255,0.1)';
+                    b.style.background = 'transparent';
+                    b.style.color = 'var(--text-tertiary)';
+                    b.classList.remove('active');
+                });
+                btn.style.border = '1px solid rgba(139,92,246,0.3)';
+                btn.style.background = 'rgba(139,92,246,0.15)';
+                btn.style.color = '#a78bfa';
+                btn.classList.add('active');
+
+                const plan = btn.dataset.plan;
+                const amount = document.getElementById('premiumAmount');
+                const period = document.getElementById('premiumPeriod');
+                const subtext = document.getElementById('premiumSubtext');
+
+                if (plan === 'yearly') {
+                    amount.textContent = '$10';
+                    period.textContent = ' /year';
+                    subtext.textContent = 'Less than $1/month';
+                } else {
+                    amount.textContent = '$20';
+                    period.textContent = ' one-time';
+                    subtext.textContent = 'Pay once, use forever';
                 }
             });
         });
