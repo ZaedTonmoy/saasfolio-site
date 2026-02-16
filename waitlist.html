@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Be the first to get access to SaaSfolio. Join the waitlist and start tracking your software investment portfolio with financial-grade analytics.">
+    <meta name="keywords" content="SaaS, portfolio tracker, ROI tracking, waitlist, early access, software investments">
+    <meta name="author" content="SaaSfolio">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Join the Waitlist — SaaSfolio Software Portfolio Tracker">
+    <meta property="og:description" content="Be the first to get access to SaaSfolio. Join the waitlist and start tracking your software investment portfolio with financial-grade analytics.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://saasfolio.com/waitlist">
+    <meta property="og:image" content="https://saasfolio.com/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Join the Waitlist — SaaSfolio Software Portfolio Tracker">
+    <meta name="twitter:description" content="Be the first to get access to SaaSfolio. Join the waitlist and start tracking your software investment portfolio.">
+    <meta name="twitter:image" content="https://saasfolio.com/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%238B5CF6' width='100' height='100'/></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Join the Waitlist — SaaSfolio Software Portfolio Tracker</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon">S</div>
+                <span>SaaSfolio</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="features.html">Features</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="use-cases.html">Use Cases</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="login.html" class="nav-signin">Sign In</a>
+                <a href="waitlist.html" class="btn btn-primary btn-sm">Get Started</a>
+            </div>
+
+            <button class="nav-burger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="features.html">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="use-cases.html">Use Cases</a>
+        <a href="blog.html">Blog</a>
+        <a href="login.html">Sign In</a>
+        <a href="waitlist.html" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 16px;">Get Started</a>
+    </div>
+
+    <!-- Hero / Main Section -->
+    <section class="hero reveal">
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+        <div class="hero-glow hero-glow-3"></div>
+
+        <div class="hero-content">
+            <!-- Badge -->
+            <div class="label-badge" style="margin-bottom: 24px;">EARLY ACCESS</div>
+
+            <!-- Heading -->
+            <h1 style="margin-bottom: 24px;">Join the waitlist for <span class="text-gradient">SaaSfolio.</span></h1>
+
+            <!-- Subtitle -->
+            <p class="subtitle center" style="margin-bottom: 48px;">
+                SaaSfolio is the portfolio dashboard built for software investors. We're opening access in waves. Join the waitlist to secure your spot — and get early-adopter pricing when we launch.
+            </p>
+
+            <!-- Waitlist Form -->
+            <form class="waitlist-form" id="waitlistForm" method="POST" action="#" onsubmit="handleWaitlistSubmit(event)">
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-input"
+                        placeholder="you@example.com"
+                        required
+                    >
+                </div>
+
+                <!-- Tools Count Field -->
+                <div class="form-group">
+                    <label for="toolCount">How many tools do you own?</label>
+                    <select id="toolCount" name="toolCount" class="form-select" required>
+                        <option value="">Select a range...</option>
+                        <option value="1-10">1-10</option>
+                        <option value="11-50">11-50</option>
+                        <option value="51-100">51-100</option>
+                        <option value="100+">100+</option>
+                    </select>
+                </div>
+
+                <!-- Use Case Field -->
+                <div class="form-group">
+                    <label for="useCase">Primary use case</label>
+                    <select id="useCase" name="useCase" class="form-select" required>
+                        <option value="">Select a use case...</option>
+                        <option value="ltd-investing">LTD investing</option>
+                        <option value="agency-reselling">Agency / Reselling</option>
+                        <option value="indie-hacking">Indie hacking</option>
+                        <option value="saas-founding">SaaS founding</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 8px;">
+                    Join the Waitlist →
+                </button>
+
+                <!-- Form Note -->
+                <p class="form-note">No spam. No selling your data. Just launch updates and early access.</p>
+            </form>
+
+            <!-- Social Proof -->
+            <div class="reveal" style="margin-top: 60px; opacity: 0.8;">
+                <p style="font-size: 0.95rem; color: var(--text-secondary);">
+                    Join <span style="color: var(--text-primary); font-weight: 600;">1,200+ software investors</span> already on the waitlist.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Teaser -->
+    <section class="section reveal" style="padding: 80px 0;">
+        <div class="container">
+            <div class="grid grid-3">
+                <!-- Card 1: Portfolio Dashboard -->
+                <div class="card reveal">
+                    <div class="card-icon">📊</div>
+                    <h3>Portfolio Dashboard</h3>
+                    <p>Track ROI, revenue, and profit across your entire tool collection.</p>
+                </div>
+
+                <!-- Card 2: Built for Investors -->
+                <div class="card reveal">
+                    <div class="card-icon">🎯</div>
+                    <h3>Built for Investors</h3>
+                    <p>Designed for LTD buyers, agencies, resellers, and SaaS founders.</p>
+                </div>
+
+                <!-- Card 3: Free to Start -->
+                <div class="card reveal">
+                    <div class="card-icon">💰</div>
+                    <h3>Free to Start</h3>
+                    <p>Begin with 10 tools free. Upgrade when your portfolio grows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="nav-logo" style="margin-bottom: 16px;">
+                    <div class="logo-icon">S</div>
+                    <span>SaaSfolio</span>
+                </div>
+                <p class="footer-tagline">Software portfolio management for serious investors.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="use-cases.html">Use Cases</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="changelog.html">Changelog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 SaaSfolio. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="https://twitter.com/saasfolio" target="_blank" rel="noopener noreferrer" aria-label="Twitter">X</a>
+                <a href="https://linkedin.com/company/saasfolio" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://github.com/saasfolio" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Waitlist form handler
+        function handleWaitlistSubmit(event) {
+            event.preventDefault();
+
+            // Get form data
+            const email = document.getElementById('email').value;
+            const toolCount = document.getElementById('toolCount').value;
+            const useCase = document.getElementById('useCase').value;
+
+            // Log submission (in production, send to backend)
+            console.log('Waitlist submission:', { email, toolCount, useCase });
+
+            // Show success feedback
+            const form = document.getElementById('waitlistForm');
+            const originalContent = form.innerHTML;
+
+            form.innerHTML = `
+                <div style="text-align: center; padding: 32px 0;">
+                    <h3 style="margin-bottom: 12px; color: var(--accent-green);">✓ You're on the waitlist!</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 20px;">Check your email for early access details and a special launch discount code.</p>
+                    <button type="button" class="btn btn-secondary" onclick="location.reload()">Join again</button>
+                </div>
+            `;
+
+            // Reset form after 3 seconds (optional)
+            setTimeout(() => {
+                form.innerHTML = originalContent;
+            }, 10000);
+        }
+    </script>
+</body>
+</html>

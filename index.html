@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Track ROI, revenue, and profit across every software tool you own. SaaSfolio is the portfolio dashboard built for LTD buyers, agencies, and digital entrepreneurs.">
+    <meta property="og:title" content="SaaSfolio — Software Portfolio Tracker for SaaS Investors">
+    <meta property="og:description" content="Track ROI, revenue, and profit across every software tool you own. SaaSfolio is the portfolio dashboard built for LTD buyers, agencies, and digital entrepreneurs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://saasfolio.app">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>SaaSfolio — Software Portfolio Tracker for SaaS Investors</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%238b5cf6'/><stop offset='100%25' stop-color='%2306b6d4'/></linearGradient></defs><rect fill='url(%23g)' rx='6' width='32' height='32'/><text x='16' y='22' text-anchor='middle' fill='white' font-size='18' font-weight='bold' font-family='sans-serif'>S</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+            <div class="logo-icon">S</div>
+            SaaSfolio
+        </a>
+        <ul class="nav-links">
+            <li><a href="features.html">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="use-cases.html">Use Cases</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="nav-signin" onclick="location.href='login.html'">Sign In</button>
+            <a href="waitlist.html" class="btn btn-primary btn-sm">Get Started</a>
+        </div>
+        <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+    <a href="features.html">Features</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="use-cases.html">Use Cases</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About</a>
+    <a href="waitlist.html" class="btn btn-primary" style="margin-top:16px;text-align:center;">Get Started</a>
+</div>
+
+<!-- Hero -->
+<section class="hero bg-grid">
+    <div class="hero-glow hero-glow-1 animate-pulse-glow"></div>
+    <div class="hero-glow hero-glow-2 animate-pulse-glow"></div>
+    <div class="hero-glow hero-glow-3 animate-pulse-glow"></div>
+    <div class="hero-content">
+        <span class="label-badge" style="margin-bottom:24px;">Now in Early Access</span>
+        <h1>Your software investments deserve a <span class="text-gradient">real dashboard.</span></h1>
+        <p class="subtitle center">SaaSfolio gives you portfolio-level visibility into every tool you've purchased — with ROI tracking, revenue analytics, and profit clarity built for LTD buyers, agencies, and SaaS investors.</p>
+        <div class="hero-actions">
+            <a href="waitlist.html" class="btn btn-primary btn-lg btn-arrow">Get Started Free</a>
+            <a href="#how-it-works" class="btn btn-secondary btn-lg">See How It Works</a>
+        </div>
+    </div>
+
+    <!-- Dashboard Mockup -->
+    <div class="container" style="position:relative;z-index:2;">
+        <div class="dashboard-mockup reveal" style="margin-top:60px;">
+            <div class="dashboard-mockup-inner">
+                <div class="mockup-topbar">
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <span style="margin-left:auto;font-size:0.75rem;color:var(--text-tertiary);">Portfolio Overview</span>
+                </div>
+                <div class="mockup-stats">
+                    <div class="mockup-stat-card">
+                        <div class="mockup-stat-label">Total Invested</div>
+                        <div class="mockup-stat-value">$47,280</div>
+                    </div>
+                    <div class="mockup-stat-card">
+                        <div class="mockup-stat-label">Total Revenue</div>
+                        <div class="mockup-stat-value blue">$128,450</div>
+                    </div>
+                    <div class="mockup-stat-card">
+                        <div class="mockup-stat-label">Net Profit</div>
+                        <div class="mockup-stat-value green">$81,170</div>
+                    </div>
+                    <div class="mockup-stat-card">
+                        <div class="mockup-stat-label">Portfolio ROI</div>
+                        <div class="mockup-stat-value purple">172%</div>
+                    </div>
+                </div>
+                <div class="mockup-chart">
+                    <div style="font-size:0.7rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px;">Revenue Over Time</div>
+                    <svg viewBox="0 0 800 160" fill="none" style="width:100%;height:120px;">
+                        <defs>
+                            <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.3"/>
+                                <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M0,140 L80,120 L160,125 L240,100 L320,80 L400,85 L480,55 L560,40 L640,30 L720,15 L800,10" stroke="#8b5cf6" stroke-width="2.5" fill="none"/>
+                        <path d="M0,140 L80,120 L160,125 L240,100 L320,80 L400,85 L480,55 L560,40 L640,30 L720,15 L800,10 L800,160 L0,160Z" fill="url(#chartGrad)"/>
+                        <path d="M0,145 L80,140 L160,130 L240,135 L320,120 L400,110 L480,100 L560,95 L640,80 L720,75 L800,60" stroke="#3b82f6" stroke-width="2" fill="none" stroke-dasharray="6,4"/>
+                    </svg>
+                    <div style="display:flex;gap:24px;margin-top:8px;font-size:0.7rem;color:var(--text-tertiary);">
+                        <span><span style="display:inline-block;width:12px;height:2px;background:#8b5cf6;margin-right:6px;vertical-align:middle;"></span>Revenue</span>
+                        <span><span style="display:inline-block;width:12px;height:2px;background:#3b82f6;margin-right:6px;vertical-align:middle;border-top:1px dashed #3b82f6;"></span>Invested</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Social Proof Bar -->
+<section class="proof-bar reveal">
+    <div class="container">
+        <div class="proof-bar-inner">
+            <div class="proof-bar-item"><span class="proof-number">1,200+</span> software investors</div>
+            <div class="proof-bar-item"><span class="proof-number">$2M+</span> in tracked investments</div>
+            <div class="proof-bar-item"><span class="proof-number">5,000+</span> tools tracked</div>
+        </div>
+    </div>
+</section>
+
+<!-- Problem Section -->
+<section class="section bg-secondary reveal">
+    <div class="container">
+        <div class="text-center" style="margin-bottom:60px;">
+            <span class="label">The Problem</span>
+            <h2>You own dozens of tools. Do you know which ones are <span class="text-gradient">actually making you money?</span></h2>
+            <p class="subtitle center" style="margin-top:20px;">Most software buyers are operating blind. You've invested thousands in lifetime deals, subscriptions, and licenses — but you have no idea whether they're paying off.</p>
+        </div>
+        <div class="grid grid-3">
+            <div class="problem-card reveal reveal-delay-1">
+                <div class="card-number">Problem 01</div>
+                <h3>No ROI visibility</h3>
+                <p>You've spent $10K+ on tools but can't tell which ones returned a single dollar. Every purchase is a guess, and every renewal is a leap of faith.</p>
+            </div>
+            <div class="problem-card reveal reveal-delay-2">
+                <div class="card-number">Problem 02</div>
+                <h3>Spreadsheet chaos</h3>
+                <p>Your tracking "system" is a Google Sheet with missing columns, outdated numbers, and no way to calculate breakeven, MRR, or profit per tool.</p>
+            </div>
+            <div class="problem-card reveal reveal-delay-3">
+                <div class="card-number">Problem 03</div>
+                <h3>Zero portfolio thinking</h3>
+                <p>You buy tools individually but never step back to see the whole picture — total invested, total revenue, overall portfolio performance.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Solution Section -->
+<section class="section bg-mesh reveal">
+    <div class="container">
+        <div class="text-center" style="margin-bottom:60px;">
+            <span class="label">The Solution</span>
+            <h2>SaaSfolio turns your tool collection into a <span class="text-gradient">managed portfolio.</span></h2>
+            <p class="subtitle center" style="margin-top:20px;">The first purpose-built dashboard for tracking the financial performance of your software investments. Add every tool you own and get real-time visibility into ROI, revenue, profit, and payback timelines.</p>
+        </div>
+        <div class="grid grid-3">
+            <div class="solution-card reveal reveal-delay-1">
+                <div class="card-number">Solution 01</div>
+                <h3>Portfolio Dashboard</h3>
+                <p>See your total invested amount, total revenue, net profit, and overall ROI at a glance. Know exactly where your portfolio stands — updated automatically.</p>
+            </div>
+            <div class="solution-card reveal reveal-delay-2">
+                <div class="card-number">Solution 02</div>
+                <h3>Per-Tool ROI</h3>
+                <p>Every tool gets its own financial profile: purchase price, revenue generated, profit, ROI percentage, breakeven status, and payback timeline.</p>
+            </div>
+            <div class="solution-card reveal reveal-delay-3">
+                <div class="card-number">Solution 03</div>
+                <h3>Revenue Intelligence</h3>
+                <p>Track one-time sales and recurring subscriptions separately. Monitor MRR, forecast payback timelines, and identify growth engines versus dead weight.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature Highlights -->
+<section class="section reveal">
+    <div class="container">
+        <div class="text-center" style="margin-bottom:60px;">
+            <span class="label">Features</span>
+            <h2>Everything you need to manage software investments <span class="text-gradient">professionally.</span></h2>
+        </div>
+        <div class="grid grid-3">
+            <div class="card reveal reveal-delay-1">
+                <div class="card-icon">&#128202;</div>
+                <h3>Portfolio Dashboard</h3>
+                <p>Total invested, revenue, profit, and ROI in a single view. Your entire software portfolio, quantified.</p>
+            </div>
+            <div class="card reveal reveal-delay-2">
+                <div class="card-icon">&#128295;</div>
+                <h3>Tool Management</h3>
+                <p>Add unlimited tools with purchase prices, revenue logs, and breakeven tracking. Every tool becomes a tracked asset.</p>
+            </div>
+            <div class="card reveal reveal-delay-3">
+                <div class="card-icon">&#128176;</div>
+                <h3>Revenue Tracking</h3>
+                <p>Log one-time sales and recurring subscriptions. Monitor MRR growth and revenue trends over time.</p>
+            </div>
+            <div class="card reveal reveal-delay-1">
+                <div class="card-icon">&#128101;</div>
+                <h3>Client Management</h3>
+                <p>Map tools to clients. Track revenue per client and lifetime client value for every relationship.</p>
+            </div>
+            <div class="card reveal reveal-delay-2">
+                <div class="card-icon">&#128200;</div>
+                <h3>Analytics & Forecasting</h3>
+                <p>ROI charts, revenue growth graphs, payback timelines, and portfolio comparisons. Data-driven decisions.</p>
+            </div>
+            <div class="card reveal reveal-delay-3">
+                <div class="card-icon">&#128276;</div>
+                <h3>Alerts & Reports</h3>
+                <p>Monthly portfolio reports, revenue milestone alerts, and email notifications. Stay informed automatically.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section class="section bg-secondary reveal" id="how-it-works">
+    <div class="container">
+        <div class="text-center" style="margin-bottom:60px;">
+            <span class="label">How It Works</span>
+            <h2>From signup to portfolio clarity in <span class="text-gradient">three steps.</span></h2>
+        </div>
+        <div class="steps">
+            <div class="step reveal reveal-delay-1">
+                <h3>Add your tools</h3>
+                <p>Import or manually add every software tool you've purchased. Include the purchase price, deal type, and any relevant notes. Takes about five minutes.</p>
+                <div class="step-connector"></div>
+            </div>
+            <div class="step reveal reveal-delay-2">
+                <h3>Log your revenue</h3>
+                <p>Record revenue as it comes in — one-time sales, recurring subscriptions, or client payments. SaaSfolio calculates ROI, profit, and breakeven automatically.</p>
+                <div class="step-connector"></div>
+            </div>
+            <div class="step reveal reveal-delay-3">
+                <h3>See the full picture</h3>
+                <p>Your portfolio dashboard lights up with performance metrics, growth charts, and actionable insights. Know what's working, what's not, and where to invest next.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Use Case Preview -->
+<section class="section reveal">
+    <div class="container">
+        <div class="text-center" style="margin-bottom:60px;">
+            <span class="label">Use Cases</span>
+            <h2>Built for the people who take software investing <span class="text-gradient">seriously.</span></h2>
+        </div>
+        <div class="grid grid-2">
+            <div class="card reveal">
+                <h3>For LTD Investors</h3>
+                <p>Track every lifetime deal purchase. Know your breakeven point. See which deals actually delivered ROI — and which were expensive experiments.</p>
+            </div>
+            <div class="card reveal">
+                <h3>For Agencies</h3>
+                <p>Manage licenses across client accounts. Track revenue per tool per client. Calculate the true profitability of every tool in your reselling stack.</p>
+            </div>
+            <div class="card reveal">
+                <h3>For Indie Hackers</h3>
+                <p>Monitor the tools that power your SaaS. Track subscription costs against revenue they help generate. Spot where money leaks before it drains you.</p>
+            </div>
+            <div class="card reveal">
+                <h3>For Resellers</h3>
+                <p>Buy low, sell with margin. SaaSfolio tracks your purchase price, sale price, and profit per transaction. Manage your reselling operation with real numbers.</p>
+            </div>
+        </div>
+        <div class="text-center" style="margin-top:40px;">
+            <a href="use-cases.html" class="btn btn-ghost btn-arrow">See All Use Cases</a>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Preview -->
+<section class="section bg-secondary reveal">
+    <div class="container">
+        <div class="text-center" style="margin-bottom:60px;">
+            <span class="label">Pricing</span>
+            <h2>Start free. Upgrade when your <span class="text-gradient">portfolio grows.</span></h2>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card reveal reveal-delay-1">
+                <div class="pricing-tier">Free</div>
+                <div class="pricing-price"><span class="amount">$0</span><span class="period"> /month</span></div>
+                <div class="pricing-desc">Track up to 10 tools and see basic portfolio metrics. Perfect for getting started.</div>
+                <ul class="pricing-features">
+                    <li><span class="icon">&#10003;</span> Up to 10 tools</li>
+                    <li><span class="icon">&#10003;</span> Basic portfolio dashboard</li>
+                    <li><span class="icon">&#10003;</span> Per-tool ROI tracking</li>
+                    <li><span class="icon">&#10003;</span> One-time revenue logging</li>
+                </ul>
+                <a href="waitlist.html" class="btn btn-secondary">Get Started Free</a>
+            </div>
+            <div class="pricing-card featured reveal reveal-delay-2">
+                <div class="pricing-badge">Most Popular</div>
+                <div class="pricing-tier">Pro</div>
+                <div class="pricing-price"><span class="amount">$19</span><span class="period"> /month</span></div>
+                <div class="pricing-desc">Unlimited tools, full analytics, client management, and monthly reports.</div>
+                <ul class="pricing-features">
+                    <li><span class="icon">&#10003;</span> Unlimited tools</li>
+                    <li><span class="icon">&#10003;</span> Full analytics & forecasting</li>
+                    <li><span class="icon">&#10003;</span> Client management</li>
+                    <li><span class="icon">&#10003;</span> MRR tracking</li>
+                    <li><span class="icon">&#10003;</span> Monthly reports</li>
+                </ul>
+                <a href="waitlist.html" class="btn btn-primary">Start Pro Free for 14 Days</a>
+            </div>
+            <div class="pricing-card reveal reveal-delay-3">
+                <div class="pricing-tier">Agency</div>
+                <div class="pricing-price"><span class="amount">$49</span><span class="period"> /month</span></div>
+                <div class="pricing-desc">Everything in Pro plus custom domain, SMTP, team access, and priority support.</div>
+                <ul class="pricing-features">
+                    <li><span class="icon">&#10003;</span> Everything in Pro</li>
+                    <li><span class="icon">&#10003;</span> Custom domain</li>
+                    <li><span class="icon">&#10003;</span> Custom SMTP</li>
+                    <li><span class="icon">&#10003;</span> Team access (up to 5)</li>
+                    <li><span class="icon">&#10003;</span> Priority support</li>
+                </ul>
+                <a href="waitlist.html" class="btn btn-secondary">Start Agency Free for 14 Days</a>
+            </div>
+        </div>
+        <div class="text-center" style="margin-top:40px;">
+            <a href="pricing.html" class="btn btn-ghost btn-arrow">View Full Pricing</a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section reveal">
+    <div class="container">
+        <div class="text-center" style="margin-bottom:60px;">
+            <span class="label">Testimonials</span>
+            <h2>What software investors are <span class="text-gradient">saying.</span></h2>
+        </div>
+        <div class="grid grid-3">
+            <div class="card reveal reveal-delay-1">
+                <p style="font-style:italic;color:var(--text-primary);margin-bottom:20px;">"I've bought over 200 lifetime deals and never knew my actual ROI until SaaSfolio. Turns out, 60% of my portfolio is profitable. The other 40%? Now I know where to cut."</p>
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <div style="width:36px;height:36px;border-radius:50%;background:var(--gradient-main);display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;color:#fff;">MK</div>
+                    <div><div style="font-weight:600;font-size:0.9rem;">Marcus K.</div><div style="font-size:0.8rem;color:var(--text-tertiary);">LTD Investor</div></div>
+                </div>
+            </div>
+            <div class="card reveal reveal-delay-2">
+                <p style="font-style:italic;color:var(--text-primary);margin-bottom:20px;">"We resell licenses to 40+ clients. SaaSfolio replaced three spreadsheets and actually tells us which tools make money and which ones we should drop."</p>
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#3b82f6,#06b6d4);display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;color:#fff;">SP</div>
+                    <div><div style="font-weight:600;font-size:0.9rem;">Sarah P.</div><div style="font-size:0.8rem;color:var(--text-tertiary);">Agency Owner</div></div>
+                </div>
+            </div>
+            <div class="card reveal reveal-delay-3">
+                <p style="font-style:italic;color:var(--text-primary);margin-bottom:20px;">"The breakeven tracker alone is worth the subscription. I can see exactly how many more sales each tool needs before it pays for itself."</p>
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#06b6d4,#10b981);display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;color:#fff;">JR</div>
+                    <div><div style="font-weight:600;font-size:0.9rem;">James R.</div><div style="font-size:0.8rem;color:var(--text-tertiary);">SaaS Reseller</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="cta-section reveal">
+    <div class="container text-center">
+        <h2>Your tools are investments.<br>It's time they had a <span class="text-gradient">portfolio.</span></h2>
+        <p class="subtitle center" style="margin-top:16px;">Join thousands of LTD buyers, agencies, and digital entrepreneurs who use SaaSfolio to track ROI, manage revenue, and make smarter software decisions.</p>
+        <div class="cta-actions" style="margin-top:40px;">
+            <a href="waitlist.html" class="btn btn-primary btn-lg btn-arrow">Get Started Free</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="nav-logo">
+                    <div class="logo-icon">S</div>
+                    SaaSfolio
+                </a>
+                <p class="footer-tagline">The financial operating system for software investors.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="use-cases.html">Use Cases</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="gradient-line">
+        <div class="footer-bottom">
+            <span>&copy; 2026 SaaSfolio. All rights reserved.</span>
+            <div class="footer-social">
+                <a href="#" aria-label="Twitter">&#120143;</a>
+                <a href="#" aria-label="LinkedIn">in</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SaaSfolio was built by software investors who needed financial clarity on their own tool collections. Learn about our mission and where we're headed.">
+    <meta name="keywords" content="About SaaSfolio, software investments, portfolio tracking, mission, vision, company story">
+    <meta name="author" content="SaaSfolio">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="About SaaSfolio — The Story Behind the Software Portfolio Dashboard">
+    <meta property="og:description" content="SaaSfolio was built by software investors who needed financial clarity on their own tool collections. Learn about our mission and where we're headed.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://saasfolio.com/about">
+    <meta property="og:image" content="https://saasfolio.com/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About SaaSfolio — The Story Behind the Software Portfolio Dashboard">
+    <meta name="twitter:description" content="SaaSfolio was built by software investors who needed financial clarity on their own tool collections. Learn about our mission and where we're headed.">
+    <meta name="twitter:image" content="https://saasfolio.com/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%238B5CF6' width='100' height='100'/></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>About SaaSfolio — The Story Behind the Software Portfolio Dashboard</title>
+
+    <style>
+        .about-hero {
+            padding: 160px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero h1 {
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(139, 92, 246, 0.15);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            color: #c4b5fd;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin-bottom: 24px;
+        }
+
+        .story-section {
+            padding: 120px 0;
+            position: relative;
+        }
+
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .story-content p {
+            margin-bottom: 24px;
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--text-secondary);
+        }
+
+        .story-content p:first-child {
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: var(--text-primary);
+        }
+
+        .values-section {
+            padding: 120px 0;
+            position: relative;
+        }
+
+        .values-heading {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .values-heading h2 {
+            margin-bottom: 12px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .value-card {
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.025);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .value-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .value-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .value-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .stats-section {
+            padding: 120px 0;
+            position: relative;
+        }
+
+        .stats-heading {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .card-stat {
+            text-align: center;
+            padding: 40px 24px;
+            background: rgba(255, 255, 255, 0.025);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-stat:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .card-stat .stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            background: var(--gradient-text);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card-stat .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .cta-section {
+            padding: 120px 0;
+            position: relative;
+        }
+
+        .cta-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .cta-content h2 {
+            margin-bottom: 32px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 14px 36px;
+            background: var(--gradient-main);
+            color: #fff;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 30px rgba(139, 92, 246, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 40px rgba(139, 92, 246, 0.4);
+        }
+
+        @media (max-width: 1024px) {
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .about-hero {
+                padding: 120px 0 60px;
+            }
+
+            .story-section {
+                padding: 80px 0;
+            }
+
+            .values-section {
+                padding: 80px 0;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .stats-section {
+                padding: 80px 0;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .card-stat {
+                padding: 32px 20px;
+            }
+
+            .card-stat .stat-value {
+                font-size: 2rem;
+            }
+
+            .cta-section {
+                padding: 80px 0;
+            }
+
+            .cta-content h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <div class="gradient-square"></div>
+                </div>
+                <span>SaaSfolio</span>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="features.html">Features</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="use-cases.html">Use Cases</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <a href="login.html" class="nav-signin">Sign In</a>
+                <a href="waitlist.html" class="nav-cta">Get Started</a>
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul class="mobile-nav-menu">
+            <li><a href="features.html">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="use-cases.html">Use Cases</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="login.html">Sign In</a></li>
+            <li><a href="waitlist.html" class="mobile-cta">Get Started</a></li>
+        </ul>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="about-hero bg-mesh reveal">
+        <div class="gradient-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+
+        <div class="page-hero-content">
+            <div class="badge">ABOUT</div>
+            <h1>Built by software investors, <span class="text-gradient">for software investors.</span></h1>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section reveal">
+        <div class="story-content">
+            <p>SaaSfolio started as a spreadsheet.</p>
+
+            <p>Like most of you, we'd accumulated a portfolio of software tools — lifetime deals from AppSumo, subscriptions for our projects, licenses we resold to clients. The collection grew, but our understanding of it didn't. We knew we'd spent a lot. We had a vague sense that some tools were profitable. But we couldn't quantify any of it.</p>
+
+            <p>So we built a spreadsheet. Then the spreadsheet broke under its own weight. Then we built SaaSfolio.</p>
+
+            <p>SaaSfolio is the software investment dashboard we wished existed when we were tracking 50 tools across three spreadsheets and a notes app. It brings portfolio-level financial thinking to a space that desperately needs it. Because software purchases aren't just expenses — they're investments. And investments deserve measurement.</p>
+
+            <p>Today, SaaSfolio serves LTD buyers, agency owners, indie hackers, SaaS founders, and resellers who take their software portfolios seriously. Our goal is to evolve into the financial operating system for anyone who buys, sells, or manages software as a business asset.</p>
+
+            <p>We're just getting started. And we're building in public.</p>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section reveal">
+        <div class="values-heading">
+            <h2>Our values.</h2>
+        </div>
+
+        <div class="values-grid">
+            <div class="value-card reveal">
+                <h3>Clarity over complexity.</h3>
+                <p>Every feature exists to make a number clearer, a decision easier, or a workflow simpler. We don't add features for the sake of feature lists.</p>
+            </div>
+
+            <div class="value-card reveal">
+                <h3>Built for investors, not users.</h3>
+                <p>We think of software buyers as investors. Our language, our metrics, and our design reflect that. ROI, not 'usage.' Profit, not 'engagement.' Portfolio, not 'list.'</p>
+            </div>
+
+            <div class="value-card reveal">
+                <h3>Transparent by default.</h3>
+                <p>We publish our roadmap. We share our metrics. We build in public. If you invest in SaaSfolio, you should be able to track that investment too.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section reveal">
+        <div class="stats-grid">
+            <div class="card-stat reveal">
+                <div class="stat-value" data-count="1200">1,200+</div>
+                <div class="stat-label">Investors on waitlist</div>
+            </div>
+
+            <div class="card-stat reveal">
+                <div class="stat-value" data-count="2000000">$2M+</div>
+                <div class="stat-label">In tracked investments</div>
+            </div>
+
+            <div class="card-stat reveal">
+                <div class="stat-value" data-count="5000">5,000+</div>
+                <div class="stat-label">Tools tracked</div>
+            </div>
+
+            <div class="card-stat reveal">
+                <div class="stat-value" data-count="172">172%</div>
+                <div class="stat-label">Average portfolio ROI</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section reveal">
+        <div class="cta-content">
+            <h2>Join us in building the future of software investing.</h2>
+            <a href="waitlist.html" class="cta-button">Get Started Free →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <div class="gradient-square"></div>
+                    </div>
+                    <span>SaaSfolio</span>
+                </div>
+                <p class="footer-tagline">Software portfolio management for serious investors.</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="use-cases.html">Use Cases</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="changelog.html">Changelog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 SaaSfolio. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://twitter.com/saasfolio" target="_blank" rel="noopener noreferrer" aria-label="Twitter">𝕏</a>
+                <a href="https://linkedin.com/company/saasfolio" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+                <a href="https://github.com/saasfolio" target="_blank" rel="noopener noreferrer" aria-label="GitHub">⚙</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
