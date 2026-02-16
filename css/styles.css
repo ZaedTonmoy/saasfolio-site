@@ -1937,6 +1937,18 @@ p {
   }
 }
 
+.pricing-grid-2col {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .pricing-grid-2col {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* --- Comparison Table --- */
 .comparison-table {
   width: 100%;
