@@ -314,34 +314,6 @@
     <!-- Scripts -->
     <script src="../js/main.js"></script>
     <script>
-        // Navigation scroll effect
-        window.addEventListener('scroll', function () {
-            const nav = document.querySelector('.nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-        });
-
-        // Mobile menu toggle
-        const hamburger = document.querySelector('.nav-burger');
-        const mobileMenu = document.querySelector('.mobile-menu');
-
-        if (hamburger) {
-            hamburger.addEventListener('click', function () {
-                mobileMenu.classList.toggle('open');
-            });
-        }
-
-        // Close mobile menu when link is clicked
-        const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', function () {
-                mobileMenu.classList.remove('open');
-            });
-        });
-
         // Blog filter functionality
         const filterButtons = document.querySelectorAll('.blog-filter-btn');
         const blogCards = document.querySelectorAll('.blog-card');
@@ -379,23 +351,6 @@
                 }, 1000);
             });
         }
-
-        // Reveal animation on scroll
-        const revealElements = document.querySelectorAll('.reveal');
-        const revealOnScroll = () => {
-            revealElements.forEach(element => {
-                const windowHeight = window.innerHeight;
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-
-                if (elementTop < windowHeight - elementVisible) {
-                    element.classList.add('visible');
-                }
-            });
-        };
-
-        window.addEventListener('scroll', revealOnScroll);
-        revealOnScroll();
     </script>
 </body>
 
