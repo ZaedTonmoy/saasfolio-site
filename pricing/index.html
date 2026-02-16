@@ -465,24 +465,6 @@
     <!-- Scripts -->
     <script src="../js/main.js"></script>
     <script>
-        // FAQ Accordion functionality
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const item = button.closest('.faq-item');
-                const isOpen = item.classList.contains('open');
-
-                // Close all other items
-                document.querySelectorAll('.faq-item').forEach(el => {
-                    el.classList.remove('open');
-                });
-
-                // Toggle current item
-                if (!isOpen) {
-                    item.classList.add('open');
-                }
-            });
-        });
-
         // Pricing toggle (Yearly / Lifetime)
         document.querySelectorAll('.toggle-btn').forEach(btn => {
             btn.addEventListener('click', () => {

@@ -2020,27 +2020,36 @@ p {
 .faq-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  max-width: 800px;
-  margin: 0 auto;
+  gap: 12px;
 }
 
 .faq-item {
+  background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-md);
   overflow: hidden;
-  transition: var(--transition);
+  transition: all 0.3s ease;
 }
 
 .faq-item:hover {
-  border-color: var(--border-glass-hover);
+  border-color: rgba(139, 92, 246, 0.25);
+  background: rgba(139, 92, 246, 0.03);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.05);
+}
+
+.faq-item.open {
+  border-color: rgba(139, 92, 246, 0.3);
+  background: rgba(139, 92, 246, 0.04);
+  box-shadow: 0 4px 24px rgba(139, 92, 246, 0.08);
+  border-left: 3px solid #8b5cf6;
 }
 
 .faq-question {
   width: 100%;
   text-align: left;
-  padding: 20px 24px;
-  background: var(--bg-card);
+  padding: 22px 24px;
+  background: transparent;
+  border: none;
   color: var(--text-primary);
   font-size: 1rem;
   font-weight: 600;
@@ -2048,29 +2057,38 @@ p {
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  transition: var(--transition);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: -0.01em;
 }
 
 .faq-question:hover {
-  background: var(--bg-card-hover);
+  color: #a78bfa;
 }
 
 .faq-arrow {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--text-tertiary);
-  transition: transform 0.3s ease;
-  min-width: 20px;
-  text-align: center;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+  min-width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .faq-item.open .faq-arrow {
   transform: rotate(180deg);
+  color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.12);
 }
 
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.3s ease;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .faq-item.open .faq-answer {
@@ -2078,10 +2096,13 @@ p {
 }
 
 .faq-answer-inner {
-  padding: 0 24px 20px;
+  padding: 0 24px 24px 27px;
   font-size: 0.95rem;
   color: var(--text-secondary);
-  line-height: 1.8;
+  line-height: 1.85;
+  border-top: 1px solid rgba(139, 92, 246, 0.08);
+  margin-top: 0;
+  padding-top: 16px;
 }
 
 /* --- Blog Cards --- */
