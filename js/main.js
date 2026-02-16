@@ -3,7 +3,7 @@
    Zero dependencies. Pure performance.
    ============================================ */
 
-(function() {
+(function () {
   'use strict';
 
   // --- Scroll reveal ---
@@ -74,13 +74,17 @@
   });
 
   // --- Active nav link ---
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const pathParts = window.location.pathname.replace(/\/$/, '').split('/');
+  const currentSlug = pathParts.pop() || '';
   document.querySelectorAll('.nav-links a, .nav-menu a').forEach(link => {
     const href = link.getAttribute('href');
-    if (href && (href === currentPath || href === './' + currentPath)) {
+    if (!href) return;
+    const linkSlug = href.replace(/\/$/, '').split('/').pop() || '';
+    if (currentSlug && linkSlug && currentSlug === linkSlug) {
       link.classList.add('active');
     }
   });
+
 
   // --- Smooth scroll for anchor links ---
   document.querySelectorAll('a[href^="#"]').forEach(a => {
