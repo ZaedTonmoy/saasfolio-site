@@ -1995,6 +1995,22 @@ p {
   background: rgba(255, 255, 255, 0.015);
 }
 
+@media (max-width: 768px) {
+  .comparison-table {
+    font-size: 0.8rem;
+    min-width: 340px;
+  }
+
+  .comparison-table thead th {
+    padding: 10px 8px;
+    font-size: 0.75rem;
+  }
+
+  .comparison-table tbody td {
+    padding: 10px 8px;
+  }
+}
+
 /* --- Use Case Tabs --- */
 .tabs-nav {
   display: flex;
