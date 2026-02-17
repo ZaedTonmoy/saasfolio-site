@@ -1062,6 +1062,14 @@ p {
     grid-template-columns: 1fr;
     direction: ltr;
   }
+
+  .feature-section .feature-content {
+    order: 1;
+  }
+
+  .feature-section .feature-visual {
+    order: 2;
+  }
 }
 
 /* --- Feature Page Mockups --- */
