@@ -420,12 +420,6 @@ p {
   .hero {
     flex-direction: column;
     min-height: auto;
-    padding: 140px 0 60px;
-  }
-
-  .hero.hero-use-cases {
-    min-height: auto;
-    padding: 140px 0 60px;
   }
 
   .hero-content {
@@ -740,6 +734,19 @@ p {
   width: 400px;
   height: 400px;
   opacity: 0.08;
+}
+
+/* --- Hero Mobile Padding (must come after base .hero) --- */
+@media (max-width: 768px) {
+  .hero {
+    padding: 160px 0 60px;
+    min-height: auto;
+  }
+
+  .hero.hero-use-cases {
+    padding: 160px 0 60px;
+    min-height: auto;
+  }
 }
 
 /* --- Page Hero (non-homepage) --- */
