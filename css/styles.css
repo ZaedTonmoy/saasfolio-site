@@ -199,6 +199,7 @@ p {
   border: 1px solid rgba(139, 92, 246, 0.2);
   color: var(--accent-purple);
   display: inline-block;
+  margin-bottom: 20px;
 }
 
 /* --- Backgrounds --- */
@@ -419,7 +420,12 @@ p {
   .hero {
     flex-direction: column;
     min-height: auto;
-    padding: 120px 0 60px;
+    padding: 140px 0 60px;
+  }
+
+  .hero.hero-use-cases {
+    min-height: auto;
+    padding: 140px 0 60px;
   }
 
   .hero-content {
