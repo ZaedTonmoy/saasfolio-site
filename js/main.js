@@ -31,7 +31,9 @@
         ticking = true;
       }
     }, { passive: true });
-    nav.classList.toggle('scrolled', window.scrollY > 20);
+    requestAnimationFrame(() => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
   }
 
   // --- Mobile menu (supports both conventions) ---
